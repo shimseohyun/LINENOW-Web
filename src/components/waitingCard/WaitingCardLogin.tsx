@@ -1,27 +1,12 @@
 import * as S from "./WaitingCard.styled";
 
 // interfaces
-import { Waiting } from "@interfaces/waiting";
 
 // hooks
 
 import Button from "@components/button/Button";
 import useBottomsheet from "@hooks/useBottomsheet";
 import LoginBottomsheetContent from "@components/login/LoginBottomsheetContent";
-
-interface WaitingCardProps {
-  waiting: Pick<
-    Waiting,
-    | "waitingID"
-    | "waitingTeamsAhead"
-    | "booth"
-    | "partySize"
-    | "waitingStatus"
-    | "confirmRemainingTime"
-    | "arrivalRemainingTime"
-  >;
-  isButton?: boolean;
-}
 
 const WaitingCardLogin = () => {
   const { openBottomsheet } = useBottomsheet();
